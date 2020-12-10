@@ -15,7 +15,7 @@ freeglut3-dev libmodplug-dev libsmpeg-dev libjpeg-dev libogg-dev libvorbis-dev l
 
 #Downloading SDK libraries
 figlet Downloading SDK libraries | lolcat
-rm -r ~/temp  
+sudo rm -r ~/temp  
 mkdir ~/temp || error "Failed to create temp folder"
 cd ~/temp || exit
 
