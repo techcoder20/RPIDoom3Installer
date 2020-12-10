@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Doom3Demo
+Path=/home/pi/RPIDoom3Installation/Doom3DemoGameFiles
+Icon=/home/pi/Doom3DemoGameFiles/Doom3Demo.png
+Exec=./dhewm3
+Terminal=false 
