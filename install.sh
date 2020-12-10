@@ -100,12 +100,11 @@ make -j4  || error "Failed to build dhewm3"
 
 Yes_Downloading_torrent () {
   figlet Downloading Game Files | lolcat
-  git clone https://github.com/techcoder20/RPIDoom3Installation.git  ~/RPIDoom3Installation || error "Failed to clone github repository"
-  cd ~/RPIDoom3Installation || exit
-  wget https://github.com/techcoder20/Doom3DemoGameFiles/releases/download/1.0.0/Doom3DemoGameFiles.zip || error "Failed to download game files"
+  cd ~/RPIDoom3Installer || exit
+  wget https://github.com/techcoder20/RPIDoom3Installer/releases/download/1.0.0/Doom3DemoGameFiles.zip || error "Failed to download game files"
   unzip Doom3DemoGameFiles.zip || error "Failed to extract game files"
   cd ~/temp/dhewm3/neo/build/ || exit
-  cp base.so d3xp.so dhewm3 libidlib.a ~/RPIDoom3Installation/Doom3DemoGameFiles || error "Failed to copy necessary files to Doom3DemoGameFile Folder"
+  cp base.so d3xp.so dhewm3 libidlib.a ~/RPIDoom3Installer/Doom3DemoGameFiles || error "Failed to copy necessary files to Doom3DemoGameFile Folder"
   cp ~/Doom3DemoGameFiles/Doom3Demo.desktop ~/Desktop || error ""
 }
 
