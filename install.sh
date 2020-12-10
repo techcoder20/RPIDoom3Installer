@@ -116,7 +116,7 @@ No_Downloading_torrent () {
 }
 
 while true; do
-    read -p -r "Do you have the game files [Y/n]?" yn
+    read -p  "Do you have the game files [Y/n]?" yn
     case $yn in
         [Yy]* ) No_Downloading_torrent; exit;;
         [Nn]* ) Yes_Downloading_torrent; exit;;
