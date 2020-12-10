@@ -3,6 +3,6 @@ Version=1.0
 Type=Application
 Name=Doom3Demo
 Path=/home/pi/RPIDoom3Installer/Doom3DemoGameFiles
-Icon=/home/pi/Doom3DemoGameFiles/Doom3Demo.png
+Icon=/home/pi/RPIDoom3Installer/Doom3Demo.png
 Exec=./dhewm3
 Terminal=false 
