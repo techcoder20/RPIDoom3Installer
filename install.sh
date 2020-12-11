@@ -100,12 +100,13 @@ make -j4  || error "Failed to build dhewm3"
 
 Yes_Downloading_torrent () {
   figlet Downloading Game Files | lolcat
-  cd ~/RPIDoom3Installer || exit
-  wget https://github.com/techcoder20/RPIDoom3Installer/releases/download/1.0.0/Doom3DemoGameFiles.zip || error "Failed to download game files"
-  unzip Doom3DemoGameFiles.zip || error "Failed to extract game files"
+  cd ~/RPIDoom3Installer
+  sudo rm -r ~/RPIDoom3Installer/Doom3DemoGameFiles.zip
+  wget https://github.com/techcoder20/RPIDoom3Installer/releases/download/v1.0.0/Doom3DemoGameFiles.zip -P ~/RPIDoom3Installer || error "Failed to download game files"
+  unzip ~/RPIDoom3Installer/Doom3DemoGameFiles.zip || error "Failed to extract game files"
   cd ~/temp/dhewm3/neo/build/ || exit
-  cp base.so d3xp.so dhewm3 libidlib.a ~/RPIDoom3Installer/Doom3DemoGameFiles || error "Failed to copy necessary files to Doom3DemoGameFile Folder"
-  cp ~/Doom3DemoGameFiles/Doom3Demo.desktop ~/Desktop || error ""
+  cp base.so d3xp.so dhewm3 libidlib.a ~/RPIDoom3Installer/Doom3Demo || error "Failed to copy necessary files to Doom3DemoGameFile Folder"
+  cp ~/RPIDoom3Installer/Doom3Demo.desktop ~/Desktop || error ""
 }
 
 No_Downloading_torrent () {
@@ -123,7 +124,4 @@ while true; do
         * ) echo "Please answer yes or no.";;
     esac
 done
-
-
-
 
