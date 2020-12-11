@@ -1,4 +1,7 @@
 # RPIDoom3Installation
+
+![screenshot](https://steam.cryotank.net/wp-content/gallery/doom3/DOOM-3-02.png)
+
 This Github Repository contains everything you need for getting Doom running on the raspberry pi. Here you will find the install script the uninstall script and the Doom3Demo game files
 
 Run this command to run the installer  
