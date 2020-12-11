@@ -4,34 +4,17 @@ You can use the [editor on GitHub](https://github.com/techcoder20/RPIDoom3Instal
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+### Run this command to run the installer
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-```markdown
-Syntax highlighted code block
+```git clone https://github.com/techcoder20/RPIDoom3Installer.git ~/RPIDoom3Installer && cd RPIDoom3Installer && sudo chmod +x install.sh uninstall.sh && ./install.sh```
 
-# Header 1
-## Header 2
-### Header 3
 
-- Bulleted
-- List
 
-1. Numbered
-2. List
+## Credits
+- **Don** from **Novaspirit Tech** for coming up with the coming up with the original install instructions  
 
-**Bold** and _Italic_ and `Code` text
+- **[Botspot](https://github.com/botspot)** (aka creator of pi apps) for helping me with the script  
 
-[Link](url) and ![Image](src)
-```
+- **Nikolay Dubnov** for testing the script  
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/techcoder20/RPIDoom3Installer/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
