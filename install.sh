@@ -31,55 +31,18 @@ cd ~/temp/SDL || exit
   --disable-video-opengl --host=arm-raspberry-linux-gnueabihf --prefix=/usr
 
 #Compiling SDK Libraries with make
-figlet Compiling SDK Libraries | lolcat
+figlet Compiling SDL Libraries | lolcat
 make || error "Failed to compile SDK Libraries"
 sudo make install || error "Failed to Compile SDK Libraries"
 cd ~/temp || exit #Coming out of SDL Folder
 
 #Downloading and extracting the 3 addons
-figlet Downloading and extracting the 3 addons | lolcat
+figlet Installing the 3 addons | lolcat
 
-sudo rm SDL2_image-2.0.5.tar.gz 
-wget http://www.libsdl.org/projects/SDL_image/release/SDL2_image-2.0.5.tar.gz || error "Failed to download SDL2_image-2.0.5.tar.gz"
-sudo rm -r ~/temp/SDL2_image-2.0.5 #Removing extracted folder if extracted before
-tar zxvf SDL2_image-2.0.5.tar.gz || error "Failed to extract SDL2_image-2.0.5.tar.gz"#Extracting addons
-
-sudo rm SDL2_mixer-2.0.4.tar.gz 
-wget http://www.libsdl.org/projects/SDL_mixer/release/SDL2_mixer-2.0.4.tar.gz || error "Failed to download SDL2_mixer-2.0.4.tar.gz"
-sudo rm -r SDL2_mixer-2.0.4 #Removing extracted folder if extracted before
-tar zxvf SDL2_mixer-2.0.4.tar.gz || error "Failed to extract SDL2_mixer-2.0.4.tar.gz"#Extracting addons
-
-sudo rm SDL2_ttf-2.0.15.tar.gz 
-wget http://www.libsdl.org/projects/SDL_ttf/release/SDL2_ttf-2.0.15.tar.gz || error "Failed to download SDL2_ttf-2.0.15.tar.gz "
-sudo rm -r SDL2_ttf-2.0.15 #Removing extracted folder if extracted before
-tar zxvf SDL2_ttf-2.0.15.tar.gz || error "Failed to extract SDL2_ttf-2.0.15.tar.gz "#Extracting addons
-
-
-
-#Building the 3 addons
-figlet Building the 3 addons | lolcat
-
-
-cd SDL2_image-2.0.5 || exit
-./autogen.sh || error "Failed to build SDL2_image-2.0.5 "
-./configure --prefix=/usr || error "Failed to build SDL2_image-2.0.5"
-make || error "Failed to build SDL2_image-2.0.5"
-sudo make install || error "Failed to build SDL2_image-2.0.5 "
-cd .. || exit
-
-cd SDL2_mixer-2.0.4 || exit
-./autogen.sh || error "Failed to build SDL2_mixer-2.0.4 "
-./configure --prefix=/usr || error "Failed to build SDL2_mixer-2.0.4 "
-make || error "Failed to build SDL2_mixer-2.0.4 "
-sudo make install || error "Failed to build SDL2_mixer-2.0.4 "
-cd .. || exit
-
-cd SDL2_ttf-2.0.15 || exit
-./autogen.sh || error "Failed to build SDL2_ttf-2.0.15"
-./configure --prefix=/usr || error "Failed to build SDL2_ttf-2.0.15"
-make || error "Failed to build SDL2_ttf-2.0.15"
-sudo make install || error "Failed to build SDL2_ttf-2.0.15"
-cd .. || exit
+cd ~/RPIDoom3Installer/SDL
+sudo dpkg -i sdl2-image_2.0.5-1_armhf.deb
+sudo dpkg -i sdl2-mixer_2.0.4-1_armhf.deb
+sudo dpkg -i sdl2-ttf_2.0.15-1_armhf.deb
 
 
 figlet Installing dhewm3 | lolcat
