@@ -47,7 +47,7 @@ sudo dpkg -i sdl2-ttf_2.0.15-1_armhf.deb
 
 figlet Installing dhewm3 | lolcat
 
-sudo rm -r ~/temp/dhewm3 #Removing repository if it is already clone
+sudo rm -r ~/temp/dhewm3 ~/temp/dhewm3 #Removing repository if it is already clone
 git clone https://github.com/dhewm/dhewm3 || error "Failed to clone dhewm3 from github" #Cloning dhewm3 repository
 cd ~/temp/dhewm3/neo/ || exit
 
