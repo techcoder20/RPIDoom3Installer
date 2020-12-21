@@ -12,5 +12,7 @@ Run this command to run the installer
 
 - Botspot aka creator of pi apps for helping me with the script  
 
-- Nikolay Dubnov for testing the script  
+### Testers
+- Nikolay Dubnov 
+- LukeFrenner
   
