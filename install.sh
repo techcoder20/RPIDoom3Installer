@@ -71,6 +71,7 @@ Yes_Downloading_torrent () {
   cd ~/temp/dhewm3/neo/build/ || exit
   cp base.so d3xp.so dhewm3 libidlib.a ~/RPIDoom3Installer/Doom3Demo || error "Failed to copy necessary files to Doom3DemoGameFile Folder"
   cp ~/RPIDoom3Installer/Doom3Demo.desktop ~/Desktop || error ""
+  cp ~/RPIDoom3Installer/Doom3Demo.desktop ~/.local/share/applications
 }
 
 No_Downloading_torrent () {
