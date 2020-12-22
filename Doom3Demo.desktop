@@ -5,4 +5,5 @@ Name=Doom3Demo
 Path=/home/pi/RPIDoom3Installer/Doom3Demo
 Icon=/home/pi/RPIDoom3Installer/Doom3Demo.png
 Exec=/home/pi/RPIDoom3Installer/Doom3Demo/dhewm3
+Categories=Game;
 Terminal=false
