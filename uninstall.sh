@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo rm -r ~/RPIDoom3Installer
+rm -rf ~/RPIDoom3Installer ~/Desktop/Doom3Demo.desktop ~/.local/share/applications/Doom3Demo.desktop
