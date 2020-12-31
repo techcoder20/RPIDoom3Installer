@@ -12,10 +12,13 @@ Run this command to run the installer
 **OR**  
 
 [![badge](https://github.com/Botspot/pi-apps/blob/master/icons/badge.png?raw=true)](https://github.com/Botspot/pi-apps)  
-  
+
+
+## Video Tutorial
+[![badge](https://raw.githubusercontent.com/techcoder20/YoutubeThumbnails/main/Doom3%20On%20RPI.png)](https://youtu.be/nSJOV-dibRY)  
   
 ## Join My Discord Server  
-[![Join our Discord server!](https://invidget.switchblade.xyz/WKdBuBKhgm)](https://discord.gg/WKdBuBKhgm)
+[![Join our Discord server!](https://invidget.switchblade.xyz/WKdBuBKhgm)](https://discord.gg/WKdBuBKhgm)  
 
 ## Credits
 - Novaspirit Tech(Came Up With The Original Method Of Getting Doom 3 Running On RPi)  
