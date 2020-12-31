@@ -18,9 +18,8 @@ Run this command to run the installer
 [![Join our Discord server!](https://invidget.switchblade.xyz/WKdBuBKhgm)](https://discord.gg/WKdBuBKhgm)
 
 ## Credits
-- Novaspirit Tech
-- Botspot helping me with the script  
-## Testers
-- Nikolay Dubnov 
-- LukeFrenner
+- Novaspirit Tech(Came Up With The Original Method Of Getting Doom 3 Running On RPi)  
+- Botspot(Helping Me With The Script And Tester)  
+- Nikolay Dubnov(Tester)   
+- LukeFrenner(Tester)  
   
