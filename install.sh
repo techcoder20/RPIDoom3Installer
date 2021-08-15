@@ -54,7 +54,7 @@ cd ~/RPIDoom3Installer/dhewm3/neo/ || exit
 #currently in ~/RPIDoom3Installer/dhewm3/neo  
 
 sudo rm -r ~/RPIDoom3Installer/dhewm3/neo/build
-mkdir ~/RPIDoom3Installer/dhewm3/neo/build || error "Failed to create build folder"
+mkdir -p ~/RPIDoom3Installer/dhewm3/neo/build || error "Failed to create build folder"
 cd ~/RPIDoom3Installer/dhewm3/neo/build || exit
 cmake ..  || error "Failed to build dhewm3"
 make -j4  || error "Failed to build dhewm3"
@@ -74,7 +74,7 @@ Yes_Downloading_torrent () {
 }
 
 No_Downloading_torrent () {
-  mkdir ~/Doom3GameFiles || error "Failed to create Doom3GameFiles Folder"
+  mkdir -p ~/Doom3GameFiles || error "Failed to create Doom3GameFiles Folder"
   figlet -w 90 Please place the game files in ~/Doom3GameFiles | lolcat 
   cd ~/RPIDoom3Installer/dhewm3/neo/build/ || exit
   cp base.so d3xp.so dhewm3 libidlib.a ~/Doom3GameFiles || error "Failed to copy necessary files to Doom3GameFile Folder"
