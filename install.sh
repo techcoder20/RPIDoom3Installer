@@ -5,13 +5,15 @@ function error {
   exit 1
 }
 
-sudo apt update
-
-#Installing dependencies
-sudo apt -y install libfontconfig-dev qt5-default automake mercurial libtool libfreeimage-dev \
-libopenal-dev libpango1.0-dev libsndfile-dev libudev-dev libtiff5-dev libwebp-dev libasound2-dev \
-libaudio-dev libxrandr-dev libxcursor-dev libxi-dev libxinerama-dev libxss-dev libesd0-dev \
-freeglut3-dev libmodplug-dev libsmpeg-dev libjpeg-dev libogg-dev libvorbis-dev libvorbisfile3 libcurl4 cmake aria2 lolcat figlet || error "Failed to install dependencies"
+if [ -z "$1" ] || [ "$1" != 'no-apt' ];then
+  sudo apt update
+  
+  #Installing dependencies
+  sudo apt -y install libfontconfig-dev qt5-default automake mercurial libtool libfreeimage-dev \
+  libopenal-dev libpango1.0-dev libsndfile-dev libudev-dev libtiff5-dev libwebp-dev libasound2-dev \
+  libaudio-dev libxrandr-dev libxcursor-dev libxi-dev libxinerama-dev libxss-dev libesd0-dev \
+  freeglut3-dev libmodplug-dev libsmpeg-dev libjpeg-dev libogg-dev libvorbis-dev libvorbisfile3 libcurl4 cmake aria2 lolcat figlet || error "Failed to install dependencies"
+fi
 
 #Downloading SDK libraries
 figlet Downloading SDL libraries | lolcat
