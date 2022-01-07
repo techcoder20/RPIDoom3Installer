@@ -20,7 +20,7 @@ figlet Downloading SDL libraries | lolcat
 cd ~/RPIDoom3Installer
 
 #currently in ~/RPIDoom3Installer
-hg clone http://hg.libsdl.org/SDL || error "Failed to clone SDL Libraries" #Cloning SDL Libraries 
+git clone  https://github.com/libsdl-org/SDL || error "Failed to clone SDL Libraries" #Cloning SDL Libraries 
 
 cd ~/RPIDoom3Installer/SDL || exit
 
