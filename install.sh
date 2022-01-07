@@ -9,10 +9,10 @@ if [ -z "$1" ] || [ "$1" != 'no-apt' ];then
   sudo apt update
   
   #Installing dependencies
-  sudo apt -y install libfontconfig-dev qt5-default automake mercurial libtool libfreeimage-dev \
+  sudo apt -y install $(grep -r "^Package: qt5-default"'$' /var/lib/apt/lists --exclude="lock" --exclude-dir="partial" | grep -o qt5-default 2>/dev/null || echo -n) libfontconfig-dev automake mercurial libtool libfreeimage-dev \
   libopenal-dev libpango1.0-dev libsndfile-dev libudev-dev libtiff5-dev libwebp-dev libasound2-dev \
   libaudio-dev libxrandr-dev libxcursor-dev libxi-dev libxinerama-dev libxss-dev libesd0-dev \
-  freeglut3-dev libmodplug-dev libsmpeg-dev libjpeg-dev libogg-dev libvorbis-dev libvorbisfile3 libcurl4 cmake aria2 lolcat figlet || error "Failed to install dependencies"
+  freeglut3-dev libmodplug-dev libsmpeg-dev libjpeg-dev libogg-dev libvorbis-dev libvorbisfile3 libcurl4 cmake aria2 lolcat figlet ~/RPIDoom3Installer/SDLAddOns/*.deb || error "Failed to install dependencies"
 fi
 
 #Downloading SDK libraries
@@ -35,15 +35,6 @@ figlet Compiling SDL Libraries | lolcat
 make || error "Failed to compile SDK Libraries"
 sudo make install || error "Failed to Compile SDK Libraries"
 cd ~/RPIDoom3Installer || exit #Coming out of SDL Folder
-
-#Downloading and extracting the 3 addons
-figlet Installing the 3 addons | lolcat
-
-cd ~/RPIDoom3Installer/SDLAddOns
-sudo dpkg -i sdl2-image_2.0.5-1_armhf.deb
-sudo dpkg -i sdl2-mixer_2.0.4-1_armhf.deb
-sudo dpkg -i sdl2-ttf_2.0.15-1_armhf.deb
-
 
 figlet Installing dhewm3 | lolcat
 
@@ -90,4 +81,3 @@ while true; do
         * ) echo "Please answer yes or no.";;
     esac
 done
-
